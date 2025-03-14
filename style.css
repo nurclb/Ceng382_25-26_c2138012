@@ -1,3 +1,5 @@
+/* Nasıl ilerlemem gerektiği konusunda sık sık Gemini ve Chatgpt'den yardım aldım*/
+
 body, html {
     margin: 0;
     padding: 0;
@@ -5,28 +7,43 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #1c1c1c; 
+    background: #1c1c1c;
     font-family: 'Lobster', Verdana, Geneva, Tahoma, sans-serif;
-  }
-  
-  
-  .container {
+}
+
+/* saati https://codepen.io/dervondenbergen/pen/dVPOwB sitesidnen aldım */
+.clock-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    color: white;
+    font-size: 20px;
+    font-family: 'Lobster', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#clock {
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.container {
     position: relative;
     width: 100%;
     height: 100vh;
-  }
-  
-  .background {
+}
+
+.background {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: brightness(50%);
     z-index: -1;
-  }
-  
-  
-  .login-box {
+}
+
+.login-box {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -39,19 +56,16 @@ body, html {
     backdrop-filter: blur(5px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     width: 300px;
-  }
-  
-  
-  
-  h2 {
-    color: #8E390C; 
+}
+
+h2 {
+    color: #8E390C;
     font-size: 22px;
     margin-bottom: 20px;
-    font-family:  'Lobster', Verdana, Geneva, Tahoma, sans-serif;
-  }
-  
-  
-  input {
+    font-family: 'Lobster', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input {
     display: block;
     margin: 10px auto;
     padding: 12px;
@@ -59,28 +73,27 @@ body, html {
     border: none;
     border-radius: 8px;
     font-size: 16px;
-  }
-  
-  
-  button {
-    background: #8E390C; 
-    transition: background-color 0.3s ease; 
+}
+
+button {
+    background: #8E390C;
+    transition: background-color 0.3s ease;
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background: #141B03;
-  }
-  
-  /* tv kodu*/
-  /* tv kodunu https://codepen.io/armanb/pen/qBvoVzm siteden aldım ve oranlarını değiştirerek kendi siteme uyarladım*/
-  
-  :root {
+}
+
+/* tv kodu*/
+/* tv kodunu https://codepen.io/armanb/pen/qBvoVzm siteden aldım ve oranlarını değiştirerek kendi siteme uyarladım*/
+
+:root {
     --white: #c1c8c7;
     --black: #1b173b;
     --blue: #1a254c;
@@ -93,268 +106,269 @@ body, html {
     --gray: #acb6c0;
     --light-gray: #717a92;
     --dark-gray: #617b99;
-  }
-  
-  body {
+}
+
+body {
     background-color: #fbeaff;
-  }
-  
-  #tv {
+}
+
+#tv {
     width: 160px;
     height: 157px;
     left: 25%;
     top: 2px;
     position: relative;
     transform: translate(-50%, -50%);
-    background: 
-      /* Control Buttons */ radial-gradient(
-          var(--metallic-blue) 10.5px,
-          transparent 11px
-        )
-        112px 79.5px / 22px 22px,
-      radial-gradient(var(--metallic-blue) 21px, transparent 22px) 112px 58px /
+    background:
+        /* Control Buttons */
+        radial-gradient(
+            var(--metallic-blue) 10.5px,
+            transparent 11px
+        ) 112px 79.5px / 22px 22px,
+        radial-gradient(var(--metallic-blue) 21px, transparent 22px) 112px 58px /
         22px 22px,
-      /* Sound Output */
-        repeating-linear-gradient(var(--black) 0 4px, var(--dark-brown) 4px 10px)
-        108.5px 102px / 28px 32px,
-      /* Screen Section */
-        linear-gradient(to right, var(--dark-blue) 100px, var(--dark-brown) 100px)
-        7px 45px / 131px 97px,
-      /* Body */ linear-gradient(to right, var(--wenge) 145px, var(--brown) 145px)
-        left 37px / 180px 113px,
-      /* Antenna */
-      linear-gradient(to right, var(--blue) 31px, var(--light-blue) 31px) 104px
-      32px / 38px 6px,
-      linear-gradient(
-        -60deg,
-        transparent 50%,
-        var(--dark-gray) calc(50% + 1px) 60%,
-        transparent calc(60% + 1px)
-      )
-      130px top / 27px 37px,
-    linear-gradient(
-        60deg,
-        transparent 50%,
-        var(--dark-gray) calc(50% + 1px) 60%,
-        transparent calc(60% + 1px)
-      )
-      90px top / 27px 37px,
-      /* Bottom Section */
-        linear-gradient(to right, var(--blue) 151px, var(--light-blue) 151px) 9px
-        bottom / 162px 10px;
+        /* Sound Output */
+        repeating-linear-gradient(var(--black) 0 4px, var(--dark-brown) 4px 10px) 108.5px 102px / 28px 32px,
+        /* Screen Section */
+        linear-gradient(to right, var(--dark-blue) 100px, var(--dark-brown) 100px) 7px 45px / 131px 97px,
+        /* Body */
+        linear-gradient(to right, var(--wenge) 145px, var(--brown) 145px) left 37px / 180px 113px,
+        /* Antenna */
+        linear-gradient(to right, var(--blue) 31px, var(--light-blue) 31px) 104px 32px / 38px 6px,
+        linear-gradient(
+            -60deg,
+            transparent 50%,
+            var(--dark-gray) calc(50% + 1px) 60%,
+            transparent calc(60% + 1px)
+        ) 130px top / 27px 37px,
+        linear-gradient(
+            60deg,
+            transparent 50%,
+            var(--dark-gray) calc(50% + 1px) 60%,
+            transparent calc(60% + 1px)
+        ) 90px top / 27px 37px,
+        /* Bottom Section */
+        linear-gradient(to right, var(--blue) 151px, var(--light-blue) 151px) 9px bottom / 162px 10px;
     background-repeat: no-repeat;
-  
+
     animation: tv-rotate 5s infinite ease-in-out;
-  }
-  
-  #tv::before,
-  #tv::after {
+    position: relative;
+}
+
+#tv::before,
+#tv::after {
     content: "";
     display: block;
     position: absolute;
-  }
-  
-  #tv::before {
+}
+
+#tv::before {
     width: 90px;
     height: 87px;
     top: 50px;
     left: 12px;
     border-radius: 10px;
-    background: radial-gradient(var(--white) 65%, transparent calc(65% + 1px))
-      center -30px / 170px 59px no-repeat;
+    background: radial-gradient(var(--white) 65%, transparent calc(65% + 1px)) center -30px / 170px 59px no-repeat;
     background-color: var(--gray);
     box-shadow: inset 3px 0 var(--dark-gray);
-  }
-  
-  #tv::after {
+    position: relative; /* Şemsiyeyi konumlandırmak için */
+}
+
+#tv::after {
     width: 22px;
     height: 49px;
     left: 112px;
     top: 55px;
     background: linear-gradient(
-          45deg,
-          transparent 40%,
-          var(--light-gray) calc(40% + 1px) 54%,
-          var(--gray) calc(54% + 1px) 60%,
-          transparent calc(60% + 1px)
-        )
-        left bottom / 22px 22px,
-      radial-gradient(var(--blue) 10.5px, transparent 10.5px) left bottom / 22px 22px,
-      linear-gradient(
-          30deg,
-          transparent 40%,
-          var(--light-gray) calc(40% + 1px) 54%,
-          var(--gray) calc(54% + 1px) 60%,
-          transparent calc(60% + 1px)
-        )
-        left top / 22px 22px,
-      radial-gradient(var(--blue) 10.5px, transparent 11px) left top / 22px 22px;
+            45deg,
+            transparent 40%,
+            var(--light-gray) calc(40% + 1px) 54%,
+            var(--gray) calc(54% + 1px) 60%,
+            transparent calc(60% + 1px)
+        ) left bottom / 22px 22px,
+        radial-gradient(var(--blue) 10.5px, transparent 10.5px) left bottom / 22px 22px,
+        linear-gradient(
+            30deg,
+            transparent 40%,
+            var(--light-gray) calc(40% + 1px) 54%,
+            var(--gray) calc(54% + 1px) 60%,
+            transparent calc(60% + 1px)
+        ) left top / 22px 22px,
+        radial-gradient(var(--blue) 10.5px, transparent 11px) left top / 22px 22px;
     background-repeat: no-repeat;
     mask-image: radial-gradient(var(--black) 8px, transparent 8.5px),
-      radial-gradient(circle, var(--black) 8px, transparent 8.5px);
+        radial-gradient(circle, var(--black) 8px, transparent 8.5px);
     -webkit-mask-image: radial-gradient(var(--black) 8px, transparent 8.5px),
-      radial-gradient(circle, var(--black) 8px, transparent 8.5px);
+        radial-gradient(circle, var(--black) 8px, transparent 8.5px);
     mask-position: left top, left bottom;
     -webkit-mask-position: left top, left bottom;
     mask-size: 22px 22px;
     -webkit-mask-size: 22px 22px;
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
-  }
-  
-  
-  /* rotate konusunda https://www.w3schools.com/ sitesinden yardım aldım */ 
-  @keyframes tv-rotate {
+}
+
+/* rotate konusunda https://www.w3schools.com/ sitesinden yardım aldım */
+@keyframes tv-rotate {
     0% {
-        transform: rotate(0deg); /* Başlangıç konumu */
+        transform: rotate(0deg);
+        /* Başlangıç konumu */
     }
+
     25% {
-        transform: rotate(5deg); /* Hafif sağa yat */
+        transform: rotate(5deg);
+        /* Hafif sağa yat */
     }
+
     50% {
-        transform: rotate(-5deg); /* Hafif sola yat */
+        transform: rotate(-5deg);
+        /* Hafif sola yat */
     }
+
     75% {
-        transform: rotate(5deg); /* Tekrar hafif sağa yat */
+        transform: rotate(5deg);
+        /* Tekrar hafif sağa yat */
     }
+
     100% {
-        transform: rotate(0deg); /* Başlangıç konumuna dön */
+        transform: rotate(0deg);
+        /* Başlangıç konumuna dön */
     }
+}
+
+
+/* şemsiyeyi https://codepen.io/kira-code/pen/RwaxXVq 'den aldım*/
+#tv .tv-umbrella {
+  position: absolute;
+  top: 0px; 
+  left: 0px; 
+  width: 100%; 
+  height: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#tv .container {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%) scale(0.1);
+  transform-origin: center center; 
+  animation: umbrella-rain-swing 3s infinite ease-in-out;
+}
+
+@keyframes umbrella-rain-swing {
+  0%, 100% {
+      transform: translate(-50%, -50%) scale(0.1) rotate(0deg);
   }
-  
-  /* Nasıl ilerlemem gerektiği konusunda sık sık Gemini ve Chatgpt'den yardım aldım*/
-  
-  #tv .tv-umbrella {
-    position: absolute;
-    top: 0px; 
-    left: 0px; 
-    width: 100%; 
-    height: 100%; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  25% {
+      transform: translate(-50%, -50%) scale(0.1) rotate(-10deg);
   }
-  
-  #tv .container {
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%) scale(0.1);
-    transform-origin: center center; 
-    animation: umbrella-rain-swing 3s infinite ease-in-out;
+  75% {
+      transform: translate(-50%, -50%) scale(0.1) rotate(10deg);
   }
-  
-  @keyframes umbrella-rain-swing {
-    0%, 100% {
-        transform: translate(-50%, -50%) scale(0.1) rotate(0deg);
-    }
-    25% {
-        transform: translate(-50%, -50%) scale(0.1) rotate(-10deg);
-    }
-    75% {
-        transform: translate(-50%, -50%) scale(0.1) rotate(10deg);
-    }
-  }
-  
-  #tv .container * {
-    position: absolute;
-  }
-  
-  #tv ::before,
-  #tv ::after {
-    content: '';
-    position: absolute;
-  }
-  
-  #tv .umb,
-  #tv .umb::before {
-    height: 190px;
-    width: 190px;
-    background: orange;
-  }
-  
-  #tv .umb {
-    top: 50px;
-    left: 50px;
-    border-top-left-radius: 300%;
-  }
-  
-  #tv .umb::before {
-    left: 190px;
-    border-top-right-radius: 300%;
-  }
-  
-  #tv .umb::after {
-    height: 100%;
-    width: 160px;
-    background: yellow;
-    left: 110px;
-    border-radius: 200% 200% 0 0;
-  }
-  
-  #tv .rond {
-    list-style: none;
-    height: 50px;
-    width: 380px;
-    padding: 0;
-    top: 140px;
-    z-index: 6;
-  }
-  
-  #tv .rond li {
-    width: 76px;
-    height: 76px;
-    background: rgb(183, 224, 235);
-    border-radius: 50%;
-    display: none;
-  }
-  
-  #tv .rond .r2 {
-    left: 76px;
-  }
-  
-  #tv .rond .r3 {
-    left: 152px;
-  }
-  
-  #tv .rond .r4 {
-    left: 228px;
-  }
-  
-  #tv .rond .r5 {
-    left: 304px;
-  }
-  
-  #tv .rond::before {
-    height: 350px;
-    width: 10px;
-    background: black;
-    top: -185px;
-    border-radius: 15px 15px 0 0;
-    left: 185px;
-    z-index: 5;
-  }
-  
-  #tv .rond::after {
-    width: 10px;
-    height: 156px;
-    background: yellow;
-    top: -155.5px;
-    left: 185px;
-    z-index: 9;
-  }
-  
-  #tv .hand {
-    height: 50px;
-    width: 50px;
-    border-style: solid;
-    border-color: rgb(2, 86, 88);
-    border-width: 14px;
-    top: 299px;
-    border-top: none;
-    border-radius: 0 0 200% 200%;
-    left: 119px;
-    z-index: 15;
-  }
+}
+
+#tv .container * {
+  position: absolute;
+}
+
+#tv ::before,
+#tv ::after {
+  content: '';
+  position: absolute;
+}
+
+#tv .umb,
+#tv .umb::before {
+  height: 190px;
+  width: 190px;
+  background: orange;
+}
+
+#tv .umb {
+  top: 50px;
+  left: 50px;
+  border-top-left-radius: 300%;
+}
+
+#tv .umb::before {
+  left: 190px;
+  border-top-right-radius: 300%;
+}
+
+#tv .umb::after {
+  height: 100%;
+  width: 160px;
+  background: yellow;
+  left: 110px;
+  border-radius: 200% 200% 0 0;
+}
+
+#tv .rond {
+  list-style: none;
+  height: 50px;
+  width: 380px;
+  padding: 0;
+  top: 140px;
+  z-index: 6;
+}
+
+#tv .rond li {
+  width: 76px;
+  height: 76px;
+  background: rgb(183, 224, 235);
+  border-radius: 50%;
+  display: none;
+}
+
+#tv .rond .r2 {
+  left: 76px;
+}
+
+#tv .rond .r3 {
+  left: 152px;
+}
+
+#tv .rond .r4 {
+  left: 228px;
+}
+
+#tv .rond .r5 {
+  left: 304px;
+}
+
+#tv .rond::before {
+  height: 350px;
+  width: 10px;
+  background: black;
+  top: -185px;
+  border-radius: 15px 15px 0 0;
+  left: 185px;
+  z-index: 5;
+}
+
+#tv .rond::after {
+  width: 10px;
+  height: 156px;
+  background: yellow;
+  top: -155.5px;
+  left: 185px;
+  z-index: 9;
+}
+
+#tv .hand {
+  height: 50px;
+  width: 50px;
+  border-style: solid;
+  border-color: rgb(2, 86, 88);
+  border-width: 14px;
+  top: 299px;
+  border-top: none;
+  border-radius: 0 0 200% 200%;
+  left: 119px;
+  z-index: 15;
+}
