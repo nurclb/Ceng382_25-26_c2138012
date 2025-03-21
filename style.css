@@ -1,6 +1,5 @@
-/* Nasıl ilerlemem gerektiği konusunda sık sık Gemini ve Chatgpt'den yardım aldım*/
-
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -236,14 +235,15 @@ body {
     }
 }
 
+/* Nasıl ilerlemem gerektiği konusunda sık sık Gemini ve Chatgpt'den yardım aldım*/
 
-/* şemsiyeyi https://codepen.io/kira-code/pen/RwaxXVq 'den aldım*/
+
 #tv .tv-umbrella {
   position: absolute;
-  top: 0px; 
-  left: 0px; 
-  width: 100%; 
-  height: 100%; 
+  top: 0px; /* TV ekranının üstüne yerleştir */
+  left: 0px; /* TV ekranının soluna yerleştir */
+  width: 100%; /* TV ekranının genişliğine ayarla */
+  height: 100%; /* TV ekranının yüksekliğine ayarla */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -256,7 +256,7 @@ body {
   top: 50%;
   left: 25%;
   transform: translate(-50%, -50%) scale(0.1);
-  transform-origin: center center; 
+  transform-origin: center center; /* Orta noktadan küçültme */
   animation: umbrella-rain-swing 3s infinite ease-in-out;
 }
 
